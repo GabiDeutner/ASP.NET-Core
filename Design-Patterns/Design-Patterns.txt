@@ -1,0 +1,40 @@
+O que são Design Patterns?
+
+Design Patterns = são soluções padrões para serem aplicadas e solucionar problemas de implementação de software
+- MVC é um padrão arquitetural, que enxerga o código de cima
+- Design Pattern é mão na massa, é escrever o código seguindo padrões
+- Começar a fazer uma aplicação com design pattern é uam boa prática
+- Pré-requisitos: conhecer orientação a objetos e UML
+- Um padrão de projeto (Design Pattern) tem um nome
+
+- Ao adotar um design pattern, se questione:
+    Que problema ele resolve?
+    Como ele resolve?
+    Com a UML é mais fácil responder essas perguntas
+
+- 3 categorias de padrões = relacionados a escrita de classes e instanciar essas classes criando objetos
+    - Padrões Criacionais: resolvem problemas relacionados a escrita de classes (quando devem ser usadas heranças e qual
+    a forma correta para serem usadas). Envolve criação de classes e de objetos.
+    Conceito de delegar: quando for criar um objeto sempre há uma classe especialista em criar aquele objeto
+    Essa classe especialista sabe os parâmetros que devem ser recebidos e todas as características mnecessária para a 
+    criação daquele objeto específico
+    - Padrões Estruturais: juntar vários objetos para criar uma funcionalidade nova
+    Simplifica tarefas complexas
+    Escrever um faced = é uma classe escrita na aplicação que vai chamar os outros métodos em sequência para simplificar
+    o objetivo principal da aplicação
+    - Padrões Comportamentais: tratam de como os objetos se comunicam entre si 
+
+
+RESUMO - 3 Categorias de Design Patterns:
+1- Padrões Criacionais
+2- Padrões Estruturais
+3- Padrões Comportamentais
+
+
+Dicas de padrões:
+
+- Estrategy: separar no seu código o que muda daquilo que não muda
+- Observable: conectar um conjunto de objetos a um objeto central
+- Builder: classe na implantação que é especializada em construir um único objeto  
+
+fonte: https://www.youtube.com/watch?v=8vq2QB4ogKM
