@@ -1,0 +1,170 @@
+Design Patterns - Factory
+
+Princípios S.O.L.I.D.
+
+Função é o centro do Universo:
+
+> function retornaValorDuplicado(valor){
+    return valor * 2;
+}
+
+< undefined
+
+> retornaValorDuplicado(4)
+< 8
+
+> retornaValorDuplicado(6)
+< 12
+
+- Escrever uma nova função que o único objetivo dela é criar um objeto em branco e retorná-lo em seguida
+- Toda vez que a função é executada, ela cria e retorna um objeto em branco
+
+> function criaObjeto() {
+    let objeto = {}
+
+    return objeto;
+}
+
+< undefined
+
+> criaObjeto();
+< {}
+
+> criaObjeto();
+< {}
+
+- Todos esses retornos estão sendo jogados fora porque nenhum deles estão sendo atribuídos para uma variável
+- Atribuir o retorno dessa função dentro de duas variáveis:
+
+let pessoaA = criaObjeto();
+< undefined
+
+let pessoaB = criaObjeto();
+< undefined
+
+- As variáveis pessoaA e pessoaB possuem objetos em branco dentro delas:
+
+> pessoaA;
+< {}
+
+> pessoaB;
+< {}
+
+> pessoaA.nome = 'Gabriela';
+< 'Gabriela'
+
+> pessoaB.nome = 'Gabi';
+< 'Gabi'
+
+> pessoaA;
+< {nome: 'Gabriela'}
+
+> pessoaB;
+< {nome: 'Gabi}
+
+- Dessa forma, essa função que recebe objetos vazios se tornou uma fábrica de objetos, porque basta chamar essa
+função atribuindo uma variável e um valor para então criar um objeto. Você pode criar quantos objetos quiser
+usando a mesma função, um objeto por variável atribuída.
+
+
+> function fabricarPessoa(nome, sobrenome){
+    let pessoa = {}
+    pessoa.nome = nome;
+    pessoa.sobrenome = sobrenome;
+
+    return pessoa;
+}
+
+< undefined
+
+> let pessoaA = fabricarPessoa('Gabriela', 'Deutner');
+< undefined
+
+> let pessoaB = fabricarPessoa('Gabi', 'Deut');
+< undefined
+
+> pessoaA;
+< {nome: 'Gabriela', sobrenome: 'Deutner'}
+
+> pessoaB;
+< {nome: 'Gabi, sobrenome: 'Deut'}
+
+- A variável pessoa que guardou o objeto que foi "concebido" dentro da função, como ela é o valor retornado pela função,
+ou seja, ela é "empurrada" para fora da função (é o return da função), então naturalmente ela é pública.
+- Resumo: o return da função é público por default
+- Qualquer código consegue interagir com o que for público no projeto, então o return que for público poderá sofrer
+interações ou interagir com outros códigos
+- Tudo o que estiver na interface pública poderá sofrer interações
+- A função irá retornar um objeto e você poderá acessar diretamente as propriedades desse objeto
+- É possível separar o que será público e o que será privado
+
+
+> function fabricarPessoa(nome, sobrenome){
+    let pessoa = {}
+    pessoa.nome = nome;
+    pessoa.sobrenome = sobrenome;
+
+    function nomeCompleto(){
+        return `${pessoa.nome} ${pessoa.sobrenome}`;
+    }
+
+    return pessoa;
+}
+
+< undefined
+
+> let pessoaA = fabricarPessoa('Gabriela', 'Deutner');
+< undefined
+
+> pessoaA.nomeCompleto();
+< error 
+
+
+- Corrigindo: o retorno da função interna nomeCompleto deve ser adicionado como uma propriedade do meu objeto pessoa,
+conforme abaixo.
+
+> function fabricarPessoa(nome, sobrenome){
+    let pessoa = {}
+    pessoa.nome = nome;
+    pessoa.sobrenome = sobrenome;
+
+    function nomeCompleto(){
+        return `${pessoa.nome} ${pessoa.sobrenome}`;
+    }
+
+    pessoa.nomeCompleto = nomeCompleto;
+
+    return pessoa;
+}
+
+< undefined
+
+> letPessoaA = fabricarPessoa('Gabriela', 'Deutner');
+
+< undefined
+
+> pessoaA.nomeCompleto();
+
+< 'Gabriela Deutner'
+
+- O Design Pattern Factory usa funções como o centro do programa e elas atuam como "fábricas" que recebem parâmetros
+e com esses parâmetros elas retornam objetos com propriedades que compõem o programa
+- Uma factory de uma forma ou de outra pode ser considerada como um módulo ou uma unidade de código
+- É muito utilizado para encapsulamento
+- Módulo:
+    Entrada dos dados
+    Validação dos dados
+    Computação dos dados
+    Retorno dos dados
+
+- Testes automatizados
+- Injeção de dependências
+
+
+
+
+
+
+
+fonte: Felipe Deschamps
+https://www.youtube.com/watch?v=arAz2Ff8s88&t=323s
