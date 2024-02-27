@@ -50,11 +50,11 @@ for(int i = 0; i < bandas.Count; i++){
 List<int> elementos = new List<int>();
 int soma = 0;
 
-bandas.Add(1);
-bandas.Add(2);
-bandas.Add(3);
-bandas.Add(4);
-bandas.Add(5);
+elementos.Add(1);
+elementos.Add(2);
+elementos.Add(3);
+elementos.Add(4);
+elementos.Add(5);
 
 foreach (int numero in numeros)
 {
