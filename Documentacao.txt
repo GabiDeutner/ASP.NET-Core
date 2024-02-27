@@ -1,0 +1,9 @@
+Documentação do .NET Framework:
+https://learn.microsoft.com/pt-br/dotnet/framework/
+
+Tutoriais do Visual Studio | C#
+https://learn.microsoft.com/pt-br/visualstudio/get-started/csharp/?view=vs-2022
+
+Documentação do C#
+https://learn.microsoft.com/pt-br/dotnet/csharp/
+

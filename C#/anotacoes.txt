@@ -1,0 +1,5 @@
+Anotações sobre o C#
+
+- O C# é uma linguagem fortemente tipada
+- Toda instrução no C# precisa terminar com ;
+- 
