@@ -2,18 +2,21 @@ Anotações sobre o C#
 
 - O C# é uma linguagem fortemente tipada
 - Toda instrução no C# precisa terminar com ;
+- Um dicionário em C# tem uma chave e um valor, ele é usado como uma "matriz" quando se tem uma lista
+- Criando um dicionário em C#:
 
-Gerador de Símbolos: https://fsymbols.com/pt/geradores/
+Dictionary<string, List<int>> bandasRegistradas = new Dictionary<string, List<int>>();
 
-- O @ antes da string "" mostra a string literal:
 
-Console.WriteLine(@"
-░██████╗░█████╗░██████╗░███████╗███████╗███╗░░██╗  ░██████╗░█████╗░██╗░░░██╗███╗░░██╗██████╗░
-██╔════╝██╔══██╗██╔══██╗██╔════╝██╔════╝████╗░██║  ██╔════╝██╔══██╗██║░░░██║████╗░██║██╔══██╗
-╚█████╗░██║░░╚═╝██████╔╝█████╗░░█████╗░░██╔██╗██║  ╚█████╗░██║░░██║██║░░░██║██╔██╗██║██║░░██║
-░╚═══██╗██║░░██╗██╔══██╗██╔══╝░░██╔══╝░░██║╚████║  ░╚═══██╗██║░░██║██║░░░██║██║╚████║██║░░██║
-██████╔╝╚█████╔╝██║░░██║███████╗███████╗██║░╚███║  ██████╔╝╚█████╔╝╚██████╔╝██║░╚███║██████╔╝
-╚═════╝░░╚════╝░╚═╝░░╚═╝╚══════╝╚══════╝╚═╝░░╚══╝  ╚═════╝░░╚════╝░░╚═════╝░╚═╝░░╚══╝╚═════╝░
-")
+- Para usar um foreach em um dicionario e fazer ele percorrer cada chave do dicionário, 
+colocar nomeDicionario.Keys:
 
-- 
+foreach (string banda in bandasRegistradas.Keys)
+
+
+- Para ver se existe uma chave no dicionário, usar o método ContainsKey:
+
+if (bandasRegistradas.ContainsKey(nomeDaBanda))
+
+
+
