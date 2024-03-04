@@ -1,0 +1,7 @@
+Desenvolvedora ASP.NET Core e Analista de Sistemas formada pela Faculdade de Tecnologia de São Paulo (FATEC) e anteriormente graduada pela Universidade de São Paulo - USP (Bioquímica e Farmácia).
+
+Durante a minha experiência como analista e como programadora, eu prezo por boas práticas no desenvolvimento de aplicações. Sou uma profissional curiosa e proativa, por isso sempre busco estudar e me atualizar sobre as melhores técnicas e ferramentas para melhoria contínua dos projetos que participo. Tenho vivência com a cultura ágil, Scrum e Kanban.
+
+Algumas palavras-chave que fazem parte das minhas habilidades como desenvolvedora ASP.NET Core: Programação em C# e Orientação a Objetos, aplicações usando ASP.NET Core, Entity Framework e LINQ. .NET com Arquitetura de Microsserviços e RabbitMQ, modelo de desenvolvimento ágil, Scrum, Kanban, consumo de APIs, versionamento com git, Banco de Dados Oracle e Microsoft SQL Server, Docker, Kubernetes, Rancher, Jenkins, Oracle Cloud Infrastructure Container Engine for Kubernetes (OKE), Design Patterns e Gitlab.
+
+Acesse meu portifólio: https://www.github.com/GabiDeutner
