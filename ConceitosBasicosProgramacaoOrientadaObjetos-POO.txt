@@ -1,0 +1,78 @@
+Simplificando Conceitos Básicos de Programação Orientada a Objetos (POO)
+
+Primeiramente, antes de entendermos o que é Programação Orientada a Objetos (POO), precisamos entender o que é um Objeto.
+
+Um objeto é a instância de uma classe.
+
+Exemplo de uma classe instanciando um objeto em Python:
+
+class Pessoa:
+    def __init__(self, nome, idade):
+        self.nome = nome
+        self.idade = idade
+
+    def cumprimentar(self):
+        print(f"Olá, meu nome é {self.nome} e eu tenho {self.idade} anos.")
+
+# Instanciando um objeto da classe Pessoa
+pessoa1 = Pessoa(nome="Alice", idade=25)
+
+# Chamando o método cumprimentar do objeto
+pessoa1.cumprimentar()
+Neste exemplo:
+
+A classe Pessoa possui um método especial __init__ que é chamado quando um novo objeto é criado. Esse método inicializa as propriedades da classe (nome e idade).
+A classe também possui um método chamado cumprimentar, que imprime uma saudação usando as propriedades do objeto.
+A linha pessoa1 = Pessoa(nome="Alice", idade=25) cria uma instância da classe Pessoa chamada pessoa1 com o nome "Alice" e idade 25.
+A linha pessoa1.cumprimentar() chama o método cumprimentar do objeto pessoa1, resultando na impressão da mensagem de saudação.
+Então, precisamos ir além. O que é uma classe?
+
+Uma classe é uma estrutura de programação que encapsula atributos e métodos.
+
+Aqui está um exemplo simplificado em Python:
+
+class Carro:
+    def __init__(self, modelo, cor, ano):
+        self.modelo = modelo
+        self.cor = cor
+        self.ano = ano
+
+# Criando uma instância da classe Carro
+meu_carro = Carro(modelo="Sedan", cor="azul", ano=2022)
+Nesse exemplo, modelo, cor e ano são as propriedades da classe Carro. Quando um objeto (como meu_carro) é criado a partir dessa classe, ele herda essas propriedades e pode acessá-las como atributos específicos desse objeto.
+
+Atributos: também chamados de propriedades, campos ou variáveis de instância.
+
+Métodos: Podem ser funções ou procedimentos.
+
+Propriedades de uma classe são características que os objetos criados a partir dessa classe possuem.
+
+Essas propriedades representam dados específicos associados a cada objeto.
+
+Por exemplo, se tivermos uma classe “Carro”, suas propriedades podem incluir coisas como “modelo”, “cor”, “ano” e assim por diante. Cada carro específico criado a partir dessa classe terá valores específicos para essas propriedades.
+
+Métodos são funções ou procedimentos associados a uma classe. Eles representam o comportamento ou as ações que os objetos dessa classe podem realizar.
+
+Os métodos operam nos dados (propriedades) da classe e podem interagir com o ambiente ou outros objetos.
+
+O que é uma Função?
+
+Uma função é um bloco de código designado para realizar uma tarefa específica.
+
+Essa tarefa pode ser uma operação matemática, manipulação de dados, execução de uma ação específica, ou qualquer outra funcionalidade definida pelo programador. Funções são fundamentais para organizar o código, torná-lo mais modular e reutilizável.
+
+Em muitas linguagens de programação, uma função é definida com um nome, uma lista de parâmetros (se necessário) e um bloco de código associado. Essa função pode ser chamada (ou invocada) em diferentes partes do programa, proporcionando uma maneira eficiente de dividir a lógica do programa em partes menores e mais gerenciáveis.
+
+Aqui está um exemplo simples de uma função em Python:
+
+def saudacao(nome):
+    """Esta função imprime uma saudação com o nome fornecido."""
+    print(f"Olá, {nome}!")
+
+# Chamando a função
+saudacao("Alice")
+saudacao("Bob")
+Neste exemplo, a função saudacao recebe um parâmetro nome e imprime uma saudação usando esse nome. Chamamos a função duas vezes, uma vez para "Alice" e outra vez para "Bob".
+
+
+Artigo no medium: https://medium.com/@deutnerg/simplificando-conceitos-b%C3%A1sicos-de-programa%C3%A7%C3%A3o-orientada-a-objetos-poo-df78c4db767f
